@@ -1,0 +1,81 @@
+{
+	"config" : {
+		"visu" : {
+			"mScaleLogoX" : 0.40,
+			"mScaleLogoY" : 0.91,
+			"mPosText" : {
+				"x" : 0.0,
+				"y" : -100.0,
+				"z" : 0.0
+			}, 
+			"mTranslaleAllObj" : {
+				"x" : 0.03,
+				"y" : 0.06
+			}, 
+			"mTranslate1" : {
+				"x" : -1.0,
+				"y" : -0.23
+			},
+			"mTranslate2" : {
+				"x" : -0.51,
+				"y" : -0.23
+			},
+			"mTranslate3" : {
+				"x" : -0.03,
+				"y" : -0.23
+			},
+			"mTranslate4" : {
+				"x" : 0.46,
+				"y" : -0.23
+			},
+			"mTranslate5" : {
+				"x" : 0.93,
+				"y" : -0.23
+			},
+			"mTranslateZ" : 0.0,
+			"mScale1" : 0.10,
+			"mScale2" : 0.10,
+			"mScale3" : 0.10,
+			"mScale4" : 0.10,
+			"mScale5" : 0.10,
+			"mSaveParam" : true,
+			"mDisplayInfos" :  false,
+			"mAngleInitObj" : { 
+				"x" : -45.0,
+				"y" : 45.0,
+				"z" : 0.0
+			}
+		},
+		"interaction" : {
+			"mOffset" : {
+				"x" : 0.0,
+				"y" : 0.0
+			},
+			"mFactor" : {
+				"x" : 10.0,
+				"y" : -1.0
+			},
+			"mOffsetControl" : {
+				"x" : 0.0,
+				"y" : 0.0
+			},
+			"mFactorControl" : {
+				"x" : 20.0,
+				"y" : -20.0 
+			},
+			"mCubeInteraction" : {
+				"x" : 300.0,
+				"y" : 400.0,
+				"z" : 500.0
+			},
+			"mOffsetLimitScreenZ" : 1500.0,
+			"mMoyDetectMovementProjectiveX" : 15.0,
+			"mMoyDetectMovementZ" : 120.0,
+			"mZLimit" : 2600.0,
+			"mDefautRotation" : {
+				"x" : 0.0,
+				"y" : 10.0
+			}
+		}
+	}
+}

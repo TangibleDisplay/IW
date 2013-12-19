@@ -1,0 +1,15 @@
+This block wraps OpenNI for Cinder. 
+
+This requires the PrimeSense driver, the OpenNI SDK, 
+and the NITE SDK, which may be downloaded here:
+http://www.openni.org/openni-sdk/
+
+-----------------------------------------
+
+Version 0.0.2
+
+-----------------------------------------
+
+http://www.wk.com
+http://www.bantherewind.com
+http://www.libcinder.org
