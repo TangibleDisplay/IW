@@ -138,6 +138,8 @@ void UserApp::draw()
 		const nite::Skeleton& skeleton = iter->getSkeleton();
 		if ( skeleton.getState() == nite::SKELETON_TRACKED ) {
 			gl::begin( GL_LINES );
+			const nite::SkeletonJoint& handRight = skeleton.getJoint(nite::JOINT_RIGHT_HAND);
+			const nite::SkeletonJoint& handleft = skeleton.getJoint(nite::JOINT_LEFT_HAND);
 			for ( vector<Bone>::const_iterator iter = mBones.begin(); iter != mBones.end(); ++iter ) {
 				const nite::SkeletonJoint& joint0 = skeleton.getJoint( iter->mJointA );
 				const nite::SkeletonJoint& joint1 = skeleton.getJoint( iter->mJointB );
@@ -228,12 +230,26 @@ void UserApp::update()
 		//if(iter->getCenterOfMass().x != 0.f && iter->getCenterOfMass().y != 0.f &&  iter->getCenterOfMass().z < 2000.f &&  iter->getCenterOfMass().z > 100.f)
 		//{
 			//ci::Vec2f CenterOfMassProjective =  convert_real_world_to_projective(ci::Vec3f(iter->getCenterOfMass().x, iter->getCenterOfMass().y, iter->getCenterOfMass().z));
-
+			nite::SkeletonJoint& handRight = nite::SkeletonJoint();
+			nite::SkeletonJoint& handleft = nite::SkeletonJoint();
+			const nite::Skeleton& skeleton = iter->getSkeleton();
+			if ( skeleton.getState() == nite::SKELETON_TRACKED ) 
+			{
+				handRight = skeleton.getJoint( nite::JOINT_RIGHT_HAND ); //nite::JOINT_RIGHT_HAND nite::JOINT_RIGHT_ELBOW
+				handleft = skeleton.getJoint( nite::JOINT_LEFT_HAND ); //nite::JOINT_LEFT_HAND nite::JOINT_LEFT_ELBOW
+			}
 			osc::Message message;
 			message.addIntArg(iter->getId());
 			message.addFloatArg(iter->getCenterOfMass().x);
 			message.addFloatArg(iter->getCenterOfMass().y);
 			message.addFloatArg(iter->getCenterOfMass().z);
+			message.addFloatArg(handRight.getPosition().x);
+			message.addFloatArg(handRight.getPosition().y);
+			message.addFloatArg(handRight.getPosition().z);
+			message.addFloatArg(handleft.getPosition().x);
+			message.addFloatArg(handleft.getPosition().y);
+			message.addFloatArg(handleft.getPosition().z);
+
 			message.setAddress("/cinder/osc/");
 			message.setRemoteEndpoint(host, port);
 			sender.sendMessage(message);
