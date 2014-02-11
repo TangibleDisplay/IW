@@ -16,6 +16,8 @@ Testé avec la ASUS XTION Pro et utilise le middleware Openni. Les blocks suivan
 Pour compiler les projets mette une variable d'environnement CINDER_085 pointant sur le le dossier cinder 2012.
 
 2 applications communiquant en OSC : User2OSC et Xone
+User2OSC se trouve dans le répertoire XOne/blocks/openni/sample
+User2OSC permet de détecter des personnes et de communiquer son centre de gravité et ses mains par OSC
 
 Touches : Pour le warping appuyer w : voir le fichier help_warping.png à la racine touche i : pour afficher infos et pour régler tous les paramètres touche f : pour changer le fullscreen touche escape : pour quitter
 
